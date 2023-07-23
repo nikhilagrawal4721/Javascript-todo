@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .todo-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #task-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  #due-date-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #save-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #list-container {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .delete-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .done {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  
+  /* Additional styles for marking tasks as done and undone */
+  li.completed {
+    background-color: #e8f0fe;
+  }
+  
+  /* Additional styles for priority levels */
+  li.high-priority {
+    border-color: #dc3545;
+  }
+  
+  li.medium-priority {
+    border-color: #ffc107;
+  }
+  
+  /* Additional styles for displaying due dates */
+  .due-date {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Additional styles for edit functionality */
+  .edit-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #138496;
+  }
+  
+  /* Additional styles for rearrange functionality */
+  li.dragging {
+    opacity: 0.5;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #searchInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  #searchButton {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Additional styles for tags */
+  .tags {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Additional styles for backlog container */
+  #backlogs-container {
+    margin-top: 30px;
+  }
+  
+  #backlogs-container p {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  /* Additional styles for activity logs container */
+  #activity-logs-container {
+    margin-top: 30px;
+  }
+  
+  #activity-logs-container li {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Additional styles for reminder */
+  .reminder {
+    font-size: 14px;
+    color: #dc3545;
+    font-weight: bold;
+  }
+  /* Additional styles for subtasks */
+.subtasks {
+    padding-left: 30px;
+  }
+  
+  .subtask-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  .subtask-item.done {
+    background-color: #d1f7d1;
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  
+  .subtask-edit-btn {
+    padding: 3px 8px;
+    font-size: 12px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .subtask-edit-btn:hover {
+    background-color: #138496;
+  }
