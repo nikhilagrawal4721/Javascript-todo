@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Todo List</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div class="container">
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <h1>Todo List</h1>
-    <input type="text" id="taskInput" placeholder="Enter your task...">
-    <button id="addButton">Add Task</button>
-    <ul id="taskList">
-      <!-- Task items will be added dynamically here -->
-    </ul>
-  </div>
+    <form id="todoForm" class="todo-form">
+      <input type="text" id="taskInput" placeholder="Enter a task" />
+      <input type="text" id="categoryInput" placeholder="Enter a category" />
+      <input type="text" id="tagsInput" placeholder="Enter tags (comma-separated)" />
+      <input type="date" id="dueDateInput" />
+      <select id="prioritySelect">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit" id="save-button" onclick="handleSave()">Save</button>
+    </form>
+    <div class="filters">
+      <label>
+        Filter by Due Date:
+        <input type="date" id="dueDateFilter" />
+      </label>
+      <label>
+        Filter by Category:
+        <input type="text" id="categoryFilter" />
+      </label>
+      <label>
+        Filter by Priority:
+        <select id="priorityFilter">
+          <option value="">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </label>
+    </div>
+    <div class="sorting">
+  <label>
+    Sort by:
+    <select id="sortSelect">
+      <option value="">None</option>
+      <option value="dueDate">Due Date</option>
+      <option value="priority">Priority</option>
+    </select>
+  </label>
+</div>
+    <div class="backlogs">
+      <h2>Backlogs</h2>
+      <ul id="backlogs-container"></ul>
+    </div>
+    <div class="activity-logs">
+      <h2>Activity Logs</h2>
+      <ul id="activity-logs-container"></ul>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+<div class="search">
+  <input type="text" id="searchInput" placeholder="Search tasks...">
+  <button id="searchButton">Search</button>
+</div>
+<div class="search-options">
+  <label>
+    <input type="radio" name="searchType" value="exactTodo" checked>
+    Exact Todo
+  </label>
+  <label>
+    <input type="radio" name="searchType" value="subtasks">
+    Sub-tasks
+  </label>
+  <label>
+    <input type="radio" name="searchType" value="similarWords">
+    Similar Words
+  </label>
+  <label>
+    <input type="radio" name="searchType" value="partial">
+    Partial Search
+  </label>
+  <label>
+    <input type="radio" name="searchType" value="tags">
+    Tags
+  </label>
+</div>
+    <ul id="list-container"></ul>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
